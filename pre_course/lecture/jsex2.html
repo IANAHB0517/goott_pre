@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // // 계산하기 if문
+        // let num = parseInt(Math.random() * 100);
+        
+        // if(num%2 === 0){
+        //     document.write("짝수입니다.")
+        // } else{
+        //     document.write("홀수입니다.")
+        // }
+        // document.write(num);
+
+        // // 출력하기 while문
+        // let number = [0,1,2,3,4,5,6,7]
+        //     i =0
+
+        //     while( i < number.length){
+        //     document.write(i+1 + " 번째 숫자입니다");
+        //     i++;
+        // }
+        // while문
+        // let a = window.prompt("양수를 입력하세요");
+
+        // while(a < 0){
+        //     window.prompt("양수를 입력하세요");
+        // } 
+        // document.write( a );
+        
+        // do while 문
+        // let num = 0;
+        // do {
+        //     num = window.prompt("양수를 입력하세요");
+        // } while( num < 0 );
+        // document.write(snum);
+
+        //js 객체 속성 변경
+            // function sizeUp(){
+            //     document.getElementById("dooly");
+            //     let doolyImg = document.getElementById("dooly");
+            //     doolyImg.style.width = "200px";
+            // }
+            // function sizeDown(obj){
+                
+            //     obj.style.width = "50px";
+            // }
+
+
+            // 숫자 증감 버튼 구현          
+
+            function minus(obj){
+                num = document.getElementById("val").value;
+                if(num >= 2){
+                num--;
+                document.getElementById("val").value = num;
+                }
+
+            }
+            function add(obj){
+                num = document.getElementById("val").value;
+                num++;
+                document.getElementById("val").value = num;
+            }
+    </script>
+    <!-- <style>
+        img:hover{width:100px;}
+    </style> -->
+</head>
+<body>
+    <!-- js 객체 속성 변경
+    <img id="dooly" onmouseover="sizeUp();" onmouseout="sizeDown(this);" width="50px" src="data:image/png;base64,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" alt="" /> -->
+                                                <!-- this -> 현재 자신의 객체를 전달함 --> 
+    
+    <!-- 숫자 증감 버튼 구현  -->
+    <button onclick="minus(this);">-</button>
+    <input type="text" value="1" id="val"/>
+    <button onclick="add(this);">+</button>
+</body>
+</html>
