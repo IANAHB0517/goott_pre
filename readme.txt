@@ -1,1 +1,1 @@
-learn form goott
+learn from goott
