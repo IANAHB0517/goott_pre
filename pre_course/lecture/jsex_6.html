@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function (){
+
+            let num = 0;
+    
+            let food1 = {
+                name : " 김치찌개",
+                img : "http://m.pere-papa.com/web/product/big/202204/597c99d0a486dbab148ea4cc5bae99ec.jpg",
+            }
+    
+            let food2 = {
+                name : " 돈까스",
+                img : "http://th3.tmon.kr/thumbs/image/6ea/082/d57/2906e06a0_700x700_95_FIT.jpg",
+            }
+    
+            let food3 = {
+                name : " 짜장면",
+                img : "http://m.eco-fresh.co.kr/web/product/big/202207/d50ada11b2faf8572fc42753d3aeba37.jpg",
+            }
+            
+            let food4 = {
+                name : " 떡볶이",
+                img : "https://desion.kr/web/product/tiny/202101/7b8394ed298eafcde0ad47a0bc64de83.jpg",
+            }
+    
+            let food5 = {
+                name : " 피자",
+                img : "https://i.ytimg.com/vi/X6VrQZhr5hQ/maxresdefault.jpg",
+            }
+    
+            let foodmenu = [food1 , food2, food3, food4, food5]
+            
+            num = parseInt(Math.random()*5);
+    
+            let output = "오늘의 추천 점심 메뉴 "+ (num + 1) + foodmenu[num].name
+    
+            // document.write(output);
+    
+            let list = "";
+            let menuImg = "";
+            if ( num == 0 ) {
+                list = "김치찌개";
+                menuImg = "http://m.pere-papa.com/web/product/big/202204/597c99d0a486dbab148ea4cc5bae99ec.jpg";
+            } else if (num == 1){
+                list = "돈까스";
+                menuImg = "http://th3.tmon.kr/thumbs/image/6ea/082/d57/2906e06a0_700x700_95_FIT.jpg";
+            } else if (num == 2){
+                list = "짜장면";
+                menuImg = "http://m.eco-fresh.co.kr/web/product/big/202207/d50ada11b2faf8572fc42753d3aeba37.jpg";
+            } else if (num == 3){
+                list = "떡볶이";
+                menuImg = "https://desion.kr/web/product/tiny/202101/7b8394ed298eafcde0ad47a0bc64de83.jpg";
+            } else {
+                list = "피자";
+                menuImg = "https://i.ytimg.com/vi/X6VrQZhr5hQ/maxresdefault.jpg";
+            }
+
+            document.getElementById("menuTitle").innerText = output;
+            document.getElementById("foodImg").src = menuImg;
+            // document.getElementById("foodImg").src = foodmenu.img;
+        }
+
+        
+
+        // document.write("오늘의 추천 점심 메뉴 : "  + list);
+
+        // if(food[num]){
+        //     (document.write(num + 1 + food ));
+
+        // }
+
+
+    </script>
+    <style>
+        h1 {
+            text-align: center;
+            color:#462788;
+        }
+        #imgdiv {
+text-align: center;
+        }
+        img {
+            
+            width:200px;
+            height:200px;
+        }
+        #reload{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="menuTitle"></h1>
+    <div id="imgdiv">
+        <img id="foodImg" src="" alt="">
+    </div>
+    <div id="reload">
+        <button onclick="location.reload();">Replay</button>
+    </div>
+    
+</body>
+</html>
