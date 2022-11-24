@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //반복문 추가 학습
+        // let a = 0;
+
+        // for( a=0; a<3; a++){
+        //     document.write("<div>손을 들었습니다!</div>")
+            
+        //     document.write("<div>손을 내렸습니다!</div>")
+        //     // a++;
+
+        // }
+
+        let num = 0;
+        let result = 0;
+
+        let input = window.prompt();
+
+        document.write("<h3>" + input + "단" + "</h3>")
+
+        for( let num = 1; num < 10; num++){
+            let result = input*num;
+            document.write("<div>" + input+ "*"+ num+ "="+ result+"</div>")
+        }
+        
+    </script>
+
+    <style>
+        body {
+            text-align: center;
+            font-style:italic;           
+        }
+        h3{
+            color:#4dd;
+        }
+
+        div {
+            margin-top:25px;
+
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

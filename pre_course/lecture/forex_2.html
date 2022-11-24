@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // quest 숫자를 입력 받아 0부터 그 숫자까지의 누적 합계를 구하는 프로그램 만들기
+        //1. 숫자를 입력 받는다
+        //2. 0부터 입력 받는 숫자까지 더한다
+        
+        // 추가 문제 : 아래의 프로그램을 개선하여 짝수합과 홀수합을 구분하여 출력하도록 변경하라
+
+        let num = window.prompt();
+
+        let evenSum = 0,oddSum = 0;
+
+        document.write("<h4>" + num + "</h4>")
+
+        for(let i=1; i <= num; i++){
+
+            if( i%2 == 0){
+            evenSum = evenSum + i;
+            document.write("<h5>" + "even processing" + evenSum + "</h5>")
+            } else{
+            oddSum = oddSum + i;
+            document.write("<h5>" + "odd processing" + oddSum + "</h5>")
+            }
+        }
+        document.write("<h2>" + "odd result is " + oddSum + "</h2>")
+        document.write("<h2>" + "even result is " + evenSum + "</h2>")
+
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
