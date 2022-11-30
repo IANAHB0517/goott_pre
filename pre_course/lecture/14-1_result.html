@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     window.onload = function() {
+          let url = location.href;
+        console.log(url);
+
+        // url 변수의 값을 ?로 잘라보자
+        // console.log(url.split("?"));
+
+        let queryStr = url.split("?")[1];
+        console.log(queryStr);
+        let arr = queryStr.split("&");
+        console.log(arr);
+
+        let name = arr[0].split("=")[1];
+        let kor = Number(arr[1].split("=")[1]);
+        let eng = Number(arr[2].split("=")[1]);
+        let math =Number(arr[3].split("=")[1]);
+
+        let aver = Math.round((kor + eng + math)/(arr.length - 1));
+        let sum = kor + eng + math
+
+        document.getElementById("name").innerHTML = name;
+        document.getElementById("kor").innerHTML = kor;
+        document.getElementById("eng").innerHTML = eng;
+        document.getElementById("math").innerHTML = math;
+        document.getElementById("aver").innerHTML = aver;
+        document.getElementById("sum").innerHTML = sum;
+
+}
+    </script>
+</head>
+<body>
+    <h1>14-1_result.html</h1>
+
+    <div> 이름 : <span id="name"></span></div>
+    <div> 국어 : <span id="kor"></span></div>
+    <div> 영어 : <span id="eng"></span></div>
+    <div> 수학 : <span id="math"></span></div>
+    <div> 평균 : <span id="aver"></span></div>
+    <div> 총합 : <span id="sum"></span></div>
+
+    
+</body>
+</html>

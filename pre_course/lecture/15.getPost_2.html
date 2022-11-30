@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get post</title>
+    <script>
+        // 문제 : 유저가 이름 국어 영어 수학 점수를 입력하고, 성적 입력 버튼을 누르면 입력 받은 데이터를 13-1_result.html 파일로 보내서
+        function goData(){
+            let name = document.getElementById("name").value;
+            let kor = document.getElementById("kor").value;
+            let eng = document.getElementById("eng").value;
+            let math = document.getElementById("math").value;
+
+            console.log(name, kor, eng ,math);
+
+           
+
+
+            if(nameValid == true && korValid == true && engValid == true && mathValid == true){
+            location.href = "15-1_result.html?name="+name +"&kor=" + kor + "&eng=" +eng
+            + "&math=" + math;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="get" action="15-1_result.html">
+        <table>
+            <tr>
+                <td>이름</td>
+                <td>국어</td>
+                <td>영어</td>
+                <td>수학</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="name" required/></td>
+                <td><input type="text" name="kor"  required/></td>
+                <td><input type="text" name="eng"  required/></td>
+                <td><input type="text" name="math" required/></td>
+            </tr>
+        </table>
+        <input type="submit" value="성적입력">
+    </form>
+    
+    
+</body>
+</html>
